@@ -1,0 +1,6 @@
+{
+	"type": "object",
+	"properties": {"label": {"type": "string", "description": "노출 라벨"}, "value": {"type": "string", "description": "실제 값"}},
+	"required": ["label", "value"],
+	"x-readme-ref-name": "FilterItemOptionResponse"
+}

@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"properties": {
+		"otpRequired": {"type": "boolean", "description": "Otp 검증 필요 여부"},
+		"otpToken": {"type": "string", "description": "Otp Token"},
+		"otpExpiredAt": {"type": "string", "format": "date-time", "description": "토큰 만료일시"},
+		"tokenInfo": {
+			"type": "object",
+			"properties": {
+				"accessToken": {"type": "string", "description": "access token"},
+				"refreshToken": {"type": "string", "description": "refresh token"}
+			},
+			"required": ["accessToken", "refreshToken"],
+			"x-readme-ref-name": "TokenInfoResponse",
+			"description": "access, refresh token"
+		}
+	},
+	"required": ["otpRequired"],
+	"x-readme-ref-name": "LoginResponse"
+}

@@ -1,0 +1,12 @@
+/* ui-form-item */
+.ui_formItem {
+	margin-bottom: 20px;
+}
+
+.ui_formItem .ant-form-item-label label {
+	font-weight: 600;
+}
+
+.ui_formItem .ant-input-number {
+	width: 100%;
+}

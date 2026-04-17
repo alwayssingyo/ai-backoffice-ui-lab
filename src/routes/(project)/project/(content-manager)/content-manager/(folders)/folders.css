@@ -1,0 +1,335 @@
+.rt_pcmfi__layout {
+	display: grid;
+	grid-template-columns: 350px minmax(0, 1fr);
+	gap: 16px;
+}
+
+.rt_pcmfi__sidebarPanel {
+	display: flex;
+	flex-direction: column;
+	background: var(--cms-color-bg-container, #ffffff);
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+	border-radius: 10px;
+	min-height: 0;
+	position: sticky;
+	top: 20px;
+	align-self: start;
+	max-height: calc(100vh - 120px);
+
+	& .ant-tree {
+		--cms-tree-title-height: 30px;
+		--cms-tree-indent-size: 30px;
+		--cms-control-interactive-size: 30px;
+		overflow: hidden;
+		padding: 0;
+	}
+}
+
+.rt_pcmfi__sidebarHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 65px;
+	gap: 12px;
+	padding: 16px;
+	border-bottom: 1px solid var(--cms-color-border, #d9d9d9);
+}
+
+.rt_pcmfi__sidebarStats {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.rt_pcmfi__sidebarItem {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.rt_pcmfi__treeToolbar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--cms-color-border, #d9d9d9);
+}
+
+.rt_pcmfi__treeToolbarSearch {
+	flex: 1;
+}
+
+.rt_pcmfi__treeToolbarActions {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.rt_pcmfi__treeBox {
+	padding: 0 12px 12px 8px;
+	overflow-y: auto;
+
+	& .ant-tree {
+		background: var(--cms-color-bg-base);
+	}
+
+	& .ant-tree-list {
+		padding-top: 10px;
+	}
+
+	& .ant-tree-draggable-icon {
+		display: none;
+	}
+
+	& .ant-tree-treenode {
+		margin: 2px;
+	}
+
+	& .ant-tree-node-content-wrapper {
+		border-radius: 4px;
+	}
+
+	& .ant-tree-node-content-wrapper .ant-tree-iconEle {
+		display: inline-flex;
+		align-items: center;
+		width: 24px;
+	}
+
+	& .ant-tree-node-content-wrapper.ant-tree-node-selected {
+		background-color: var(--cms-color-fill);
+	}
+
+	& .ant-tree-switcher {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0;
+		height: var(--cms-tree-title-height, 30px);
+	}
+}
+
+.rt_pcmfi__treeEmpty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 220px;
+	padding: 12px 0;
+}
+
+.rt_pcmfi__treeSwitcherIcon {
+	width: 20px;
+	height: 20px;
+	transition: transform 0.2s ease;
+	transform: rotate(0deg);
+}
+
+.rt_pcmfi__treeSwitcherIcon--expanded {
+	transform: rotate(180deg);
+}
+
+.rt_pcmfi__treeNodeLabel {
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.rt_pcmfi__treeNodeLabel--folder {
+	font-weight: 600;
+}
+
+.rt_pcmfi__treeNodeLabel--hidden {
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+.rt_pcmfi__treeNodeIcon--hidden {
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+.rt_pcmfi__detailPanel {
+	display: flex;
+	align-content: start;
+	flex-direction: column;
+	background: var(--cms-color-bg-container, #ffffff);
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+	border-radius: 10px;
+	min-height: 0;
+	padding: 16px 20px;
+}
+
+.rt_pcmfi__detailHeader {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: 12px;
+	padding-bottom: 30px;
+}
+
+.rt_pcmfi__buttonRow {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.rt_pcmfi__detailBody {
+	display: grid;
+	gap: 20px;
+}
+
+.rt_pcmfi__heroCard {
+	display: block;
+	padding-top: 4px;
+	width: 100%;
+}
+
+.rt_pcmfi__heroContent {
+	display: grid;
+	gap: 8px;
+	min-width: 0;
+}
+
+.rt_pcmfi__heroMeta {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+
+	& .ant-tag {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		white-space: nowrap;
+	}
+
+	& .ant-tag .anticon,
+	& .ant-tag svg {
+		display: inline-flex;
+		flex-shrink: 0;
+	}
+}
+
+.rt_pcmfi__heroStateTag--hidden {
+	& .ant-tag {
+		color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+	}
+}
+
+.rt_pcmfi__detailActions {
+	flex-shrink: 0;
+}
+
+.rt_pcmfi__detailSection {
+	display: grid;
+	gap: 12px;
+	padding-top: 20px;
+	border-top: 1px solid var(--cms-color-border-secondary, #f0f0f0);
+}
+
+.rt_pcmfi__detailTopSection {
+	display: grid;
+	gap: 12px;
+	border: none;
+	padding: 0;
+}
+
+.rt_pcmfi__detailStatsSection {
+	padding: 0;
+	gap: 16px;
+	border: none;
+}
+
+.rt_pcmfi__fieldList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.rt_pcmfi__fieldBlock {
+	display: grid;
+	gap: 8px;
+}
+
+.rt_pcmfi__fieldBlock {
+	& .ant-typography strong {
+		color: var(--cms-color-text, rgba(0, 0, 0, 0.88));
+	}
+
+	& .ant-typography {
+		color: var(--cms-color-text-tertiary);
+		font-size: 13px;
+		font-weight: 500;
+	}
+}
+
+.rt_pcmfi__fieldValue {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 0 16px;
+	border-radius: 14px;
+	background: var(--cms-color-fill-quaternary, #fafafa);
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--cms-color-text, rgba(0, 0, 0, 0.88));
+}
+
+.rt_pcmfi__fieldCodeValue {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 0 16px;
+	border-radius: 14px;
+	background: var(--cms-color-fill-quaternary, #fafafa);
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--cms-color-text, rgba(0, 0, 0, 0.88));
+	font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.rt_pcmfi__statsGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.rt_pcmfi__statCard {
+	display: grid;
+	gap: 8px;
+	padding: 16px;
+	border-radius: 14px;
+	background: var(--cms-color-fill-quaternary);
+}
+
+.rt_pcmfi__switchRow {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 12px;
+	min-height: 84px;
+	padding: 16px;
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+	border-radius: 16px;
+}
+
+.rt_pcmfi__switchLabel {
+	display: grid;
+	gap: 4px;
+}
+
+.rt_pcmfi__switchLabel {
+	& .ant-typography {
+		margin-bottom: 0;
+	}
+
+	& .ant-typography strong {
+		color: var(--cms-color-text, rgba(0, 0, 0, 0.88));
+	}
+}
+
+.rt_pcmfi__empty {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+	height: 100%;
+}

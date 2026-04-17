@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"usePlatformLogin": {"type": "boolean", "description": "플랫폼 로그인 사용 여부"},
+		"useGcpLogin": {"type": "boolean", "description": "GCP 로그인 사용 여부"}
+	},
+	"required": ["useGcpLogin", "usePlatformLogin"],
+	"x-readme-ref-name": "AuthPlatformResponse"
+}

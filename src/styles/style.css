@@ -1,0 +1,5 @@
+@import "./_reset.css";
+
+.ant-app {
+	height: 100%;
+}

@@ -1,0 +1,22 @@
+.loc_mtenf {
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+	padding-bottom: 76px;
+}
+
+.loc_mtenf__form {
+	margin-top: 16px;
+}
+
+.loc_mtenf__actions {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	width: 100%;
+	padding: 16px;
+	background-color: var(--cms-color-bg-base, #fff);
+	border-radius: 0 0 var(--cms-border-radius, 10px) var(--cms-border-radius, 10px);
+}

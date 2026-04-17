@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"ids": {
+			"type": "array",
+			"description": "잠금 해제할 관리자 아이디 목록",
+			"items": {"type": "integer", "format": "int64"},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+	"required": ["ids"],
+	"x-readme-ref-name": "AdminUnlockRequest"
+}

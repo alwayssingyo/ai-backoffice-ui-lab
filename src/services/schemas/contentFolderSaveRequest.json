@@ -1,0 +1,12 @@
+{
+	"type": "object",
+	"properties": {
+		"nodes": {
+			"type": "array",
+			"description": "루트 노드 목록(FOLDER/TABLE 혼합)",
+			"items": {"$ref": "#/components/schemas/ContentFolderSaveNodeRequest"}
+		}
+	},
+	"required": ["nodes"],
+	"x-readme-ref-name": "ContentFolderSaveRequest"
+}

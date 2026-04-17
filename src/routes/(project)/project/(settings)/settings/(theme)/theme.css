@@ -1,0 +1,141 @@
+.rt_pthi__board {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 960px;
+}
+
+.rt_pthi__panel {
+	& .ant-card-body {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 24px;
+	}
+}
+
+.rt_pthi__panelHeader {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.rt_pthi__fieldList {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.rt_pthi__field {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.rt_pthi__fieldMeta {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.rt_pthi__pickerRow {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.rt_pthi__picker {
+	& .ant-color-picker-trigger {
+		min-width: 104px;
+		height: 40px;
+		padding-inline: 12px;
+		border-radius: 12px;
+	}
+}
+
+.rt_pthi__pickerMeta {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.rt_pthi__token {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--cms-color-bg-container, #ffffff) 92%, var(--cms-color-primary, #1677ff) 8%);
+	border: 1px solid color-mix(in srgb, var(--cms-color-border, #d9d9d9) 80%, transparent);
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.rt_pthi__presetGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.rt_pthi__presetButton {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 14px 16px;
+	border: 1px solid color-mix(in srgb, var(--cms-color-border, #d9d9d9) 82%, transparent);
+	border-radius: 16px;
+	background: color-mix(in srgb, var(--rt-pthi-preset-color, #282828) 8%, var(--cms-color-bg-container, #ffffff));
+	color: inherit;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		transform 120ms ease,
+		border-color 120ms ease,
+		box-shadow 120ms ease;
+}
+
+.rt_pthi__presetButton:hover {
+	transform: translateY(-1px);
+	border-color: color-mix(in srgb, var(--rt-pthi-preset-color, #282828) 48%, var(--cms-color-border, #d9d9d9));
+	box-shadow: 0 12px 22px rgb(15 23 42 / 0.08);
+}
+
+.rt_pthi__presetButton:focus-visible {
+	outline: 2px solid color-mix(in srgb, var(--rt-pthi-preset-color, #282828) 40%, transparent);
+	outline-offset: 2px;
+}
+
+.rt_pthi__presetButton--active {
+	border-color: color-mix(in srgb, var(--rt-pthi-preset-color, #282828) 64%, transparent);
+	box-shadow: 0 0 0 2px color-mix(in srgb, var(--rt-pthi-preset-color, #282828) 18%, transparent);
+}
+
+.rt_pthi__presetLabel {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.rt_pthi__presetDesc {
+	font-size: 12px;
+	line-height: 1.5;
+	color: var(--cms-color-text-secondary, rgba(0, 0, 0, 0.45));
+}
+
+.rt_pthi__actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+	.rt_pthi__presetGrid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.rt_pthi__panel {
+		& .ant-card-body {
+			padding: 20px;
+		}
+	}
+}

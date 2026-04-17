@@ -1,0 +1,30 @@
+.loc_mmau__root {
+	display: grid;
+	gap: 16px;
+}
+
+.loc_mmau__header {
+	display: grid;
+	gap: 4px;
+}
+
+.loc_mmau__body {
+	display: grid;
+
+	& .ant-upload-list {
+		max-height: 250px;
+		overflow-y: auto;
+	}
+}
+
+.loc_mmau__footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	min-height: 32px;
+}
+
+.loc_mmau__actions {
+	display: flex;
+	gap: 8px;
+}

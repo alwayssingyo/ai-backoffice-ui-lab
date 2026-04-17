@@ -1,0 +1,25 @@
+.ui_table .ant-table {
+	overflow: hidden;
+	box-shadow: rgba(33, 33, 52, 0.1) 0px 1px 4px;
+}
+
+.ui_table .ant-table-thead .ant-table-cell {
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+	font-size: 12px;
+}
+
+.ui_table .ui_table__col {
+	max-width: 250px;
+}
+
+.ui_table.ant-table-wrapper .ant-table.ant-table-middle .ant-table-cell {
+	padding: 12px 18px;
+}
+
+.ui_table.ant-table-wrapper .ant-table.ant-table-middle .ant-table-cell:has(.ui_table__colEdit) {
+	padding: 12px 8px;
+}
+
+.ui_table .ui_table__colTag {
+	margin-left: 6px;
+}

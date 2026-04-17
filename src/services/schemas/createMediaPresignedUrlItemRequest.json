@@ -1,0 +1,11 @@
+{
+	"type": "object",
+	"properties": {
+		"columnName": {"type": "string", "description": "MEDIA 필드 논리 컬럼 이름", "minLength": 1, "pattern": "^[a-z_][a-z0-9_]{0,63}$"},
+		"name": {"type": "string", "description": "원본 파일명", "minLength": 1},
+		"mimeType": {"type": "string", "description": "MIME 타입", "minLength": 1},
+		"size": {"type": "integer", "format": "int64", "description": "파일 크기(byte)", "minimum": 1}
+	},
+	"required": ["columnName", "mimeType", "name", "size"],
+	"x-readme-ref-name": "CreateMediaPresignedUrlItemRequest"
+}

@@ -1,0 +1,17 @@
+{
+	"type": "object",
+	"description": "시스템 설정 DTO",
+	"properties": {
+		"config": {"type": "string", "description": "설정 키", "example": "cms.theme.color"},
+		"value": {"type": "string", "description": "설정 값", "example": "dark"},
+		"description": {"type": "string", "description": "설명", "example": "시스템 설정입니다."},
+		"personalized": {
+			"type": "boolean",
+			"default": false,
+			"description": "개인화된 값 여부 (true: 사용자별 설정, false: 공통 설정)",
+			"example": true
+		}
+	},
+	"required": ["config", "value"],
+	"x-readme-ref-name": "ConfigValueRequest"
+}

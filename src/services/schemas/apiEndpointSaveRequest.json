@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"tagName": {"type": "string", "description": "Tag name", "minLength": 1},
+		"httpMethods": {
+			"type": "array",
+			"description": "사용 가능한 HTTP 메서드 목록",
+			"items": {"type": "string", "enum": ["GET", "POST", "PUT", "DELETE"]},
+			"uniqueItems": true
+		}
+	},
+	"required": ["httpMethods", "tagName"],
+	"x-readme-ref-name": "ApiEndpointSaveRequest"
+}

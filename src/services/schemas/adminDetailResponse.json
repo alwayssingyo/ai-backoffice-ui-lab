@@ -1,0 +1,31 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "어드민 아이디"},
+		"permissionGroup": {
+			"type": "object",
+			"properties": {
+				"id": {"type": "integer", "format": "int64", "description": "권한 그룹 아이디"},
+				"name": {"type": "string", "description": "권한 그룹명"},
+				"description": {"type": "string", "description": "설명"}
+			},
+			"required": ["id", "name"],
+			"x-readme-ref-name": "PermissionGroupResponse",
+			"description": "권한 그룹"
+		},
+		"provider": {"type": "string", "description": "소셜 유형", "enum": ["GOOGLE", "APPLE"]},
+		"loginId": {"type": "string", "description": "로그인 아이디"},
+		"name": {"type": "string", "description": "이름"},
+		"otpSecretKey": {"type": "string", "description": "OTP Secret Key"},
+		"removed": {"type": "boolean", "description": "삭제 여부"},
+		"lockCount": {"type": "integer", "format": "int32", "description": "비밀번호 오류횟수"},
+		"lockedAt": {"type": "string", "format": "date-time", "description": "잠금 일시"},
+		"createdAt": {"type": "string", "format": "date-time", "description": "계정 생성 일시"},
+		"disabledAt": {"type": "string", "format": "date-time", "description": "삭제 일시"},
+		"lastLoginAt": {"type": "string", "format": "date-time", "description": "마지막 로그인 일시"},
+		"resetPasswordAt": {"type": "string", "format": "date-time", "description": "비밀번호 변경일시"},
+		"tenantId": {"type": "integer", "format": "int64", "description": "테넌시 ID"}
+	},
+	"required": ["createdAt", "id", "loginId", "name", "permissionGroup", "removed"],
+	"x-readme-ref-name": "AdminDetailResponse"
+}

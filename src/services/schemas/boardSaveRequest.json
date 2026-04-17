@@ -1,0 +1,12 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "게시판 아이디 - null이면 등록, 아니면 수정"},
+		"type": {"type": "string", "description": "게시판 유형", "enum": ["NOTICE", "BUILD_NOTE"]},
+		"grade": {"type": "string", "description": "등급", "minLength": 1},
+		"title": {"type": "string", "description": "제목", "minLength": 1},
+		"content": {"type": "string", "description": "내용"}
+	},
+	"required": ["grade", "title", "type"],
+	"x-readme-ref-name": "BoardSaveRequest"
+}

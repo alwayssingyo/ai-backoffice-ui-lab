@@ -1,0 +1,6 @@
+{
+	"type": "object",
+	"properties": {"config": {"type": "string", "description": "설정 키"}, "value": {"type": "string", "description": "설정 값"}},
+	"required": ["config", "value"],
+	"x-readme-ref-name": "ConfigValueResponse"
+}

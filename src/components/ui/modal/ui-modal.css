@@ -1,0 +1,3 @@
+.ui_modal .ant-modal-container:not(:has(.ant-modal-header)) .ant-modal-body {
+	margin-top: 32px;
+}

@@ -1,0 +1,10 @@
+{
+	"type": "object",
+	"properties": {
+		"page": {"type": "integer", "format": "int32"},
+		"totalCount": {"type": "integer", "format": "int32"},
+		"list": {"type": "array", "items": {"type": "object", "additionalProperties": {}}}
+	},
+	"required": ["list", "page", "totalCount"],
+	"x-readme-ref-name": "OnePageMapStringObject"
+}

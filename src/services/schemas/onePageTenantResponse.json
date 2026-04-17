@@ -1,0 +1,23 @@
+{
+	"type": "object",
+	"properties": {
+		"page": {"type": "integer", "format": "int32"},
+		"totalCount": {"type": "integer", "format": "int32"},
+		"list": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"type": "integer", "format": "int64", "description": "테넌트 아이디"},
+					"name": {"type": "string", "description": "테넌트명"},
+					"creatorId": {"type": "integer", "format": "int64", "description": "생성자 아이디"},
+					"createdAt": {"type": "string", "format": "date-time", "description": "생성 일시"}
+				},
+				"required": ["createdAt", "creatorId", "id", "name"],
+				"x-readme-ref-name": "TenantResponse"
+			}
+		}
+	},
+	"required": ["list", "page", "totalCount"],
+	"x-readme-ref-name": "OnePageTenantResponse"
+}

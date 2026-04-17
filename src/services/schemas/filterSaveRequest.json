@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "필터 아이디 - null이면 등록, 아니면 수정"},
+		"table": {"type": "string", "description": "테이블명", "minLength": 1},
+		"field": {"type": "string", "description": "컬럼명", "minLength": 1},
+		"label": {"type": "string", "description": "컬럼 레이블", "minLength": 1},
+		"dataType": {"type": "string", "description": "컬럼 타입", "minLength": 1},
+		"operator": {"type": "string", "description": "연산자", "minLength": 1},
+		"component": {"type": "string", "description": "입력 컴포넌트", "minLength": 1},
+		"items": {"type": "string", "description": "컴포넌트 요소"}
+	},
+	"required": ["component", "dataType", "field", "label", "operator", "table"],
+	"x-readme-ref-name": "FilterSaveRequest"
+}

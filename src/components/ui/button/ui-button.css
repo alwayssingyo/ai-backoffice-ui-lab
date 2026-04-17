@@ -1,0 +1,8 @@
+.ui_button {
+	/* biome-ignore lint/complexity/noImportantStyles: antd 기본 그림자를 확실히 덮기 위해 필요합니다. */
+	box-shadow: none !important;
+}
+
+.ui_button .ant-btn-icon {
+	font-size: 0;
+}

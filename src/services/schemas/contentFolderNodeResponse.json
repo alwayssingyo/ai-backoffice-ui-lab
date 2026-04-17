@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "노드 아이디"},
+		"parentId": {"type": "integer", "format": "int64", "description": "부모 폴더 아이디"},
+		"nodeType": {"type": "string", "description": "노드 타입(FOLDER/TABLE)", "enum": ["FOLDER", "TABLE"]},
+		"name": {"type": "string", "description": "표시명"},
+		"tableName": {"type": "string", "description": "테이블명(TABLE 타입 전용)"},
+		"orderNumber": {"type": "integer", "format": "int32", "description": "정렬 순서"},
+		"displayed": {"type": "boolean", "description": "노출 여부"},
+		"children": {"$ref": "#/components/schemas/ContentFolderNodeResponse", "description": "하위 노드"}
+	},
+	"required": ["children", "displayed", "id", "name", "nodeType", "orderNumber"],
+	"x-readme-ref-name": "ContentFolderNodeResponse"
+}

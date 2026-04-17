@@ -1,0 +1,33 @@
+.loc_mecf__root {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.loc_mecf__header {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.loc_mecf__body {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+	max-height: 340px;
+	overflow: auto;
+	padding: 4px;
+}
+
+.loc_mecf__item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 32px;
+}
+
+.loc_mecf__footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}

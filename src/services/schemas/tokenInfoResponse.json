@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"accessToken": {"type": "string", "description": "access token"},
+		"refreshToken": {"type": "string", "description": "refresh token"}
+	},
+	"required": ["accessToken", "refreshToken"],
+	"x-readme-ref-name": "TokenInfoResponse"
+}

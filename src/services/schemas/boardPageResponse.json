@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "게시글 아이디"},
+		"type": {"type": "string", "description": "게시판 유형", "enum": ["NOTICE", "BUILD_NOTE"]},
+		"grade": {"type": "string", "description": "등급"},
+		"title": {"type": "string", "description": "제목"},
+		"content": {"type": "string", "description": "내용"},
+		"creatorId": {"type": "integer", "format": "int64", "description": "작성자 아이디"},
+		"creatorName": {"type": "string", "description": "작성자 이름"},
+		"createdAt": {"type": "string", "format": "date-time", "description": "생성 일시"}
+	},
+	"required": ["createdAt", "creatorId", "grade", "id", "title", "type"],
+	"x-readme-ref-name": "BoardPageResponse"
+}

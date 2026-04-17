@@ -1,0 +1,31 @@
+.rt_psfii__layout {
+	display: grid;
+	grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+	gap: 20px;
+	align-items: stretch;
+}
+
+.rt_psfii__sidebarPanel,
+.rt_psfii__detailPanel {
+	min-height: 0;
+}
+
+.rt_psfii__feedback {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 16px;
+	padding: 14px 16px;
+	border: 1px solid color-mix(in srgb, var(--cms-color-warning, #d97706) 30%, transparent);
+	border-radius: 12px;
+	background: color-mix(in srgb, var(--cms-color-warning, #d97706) 8%, var(--cms-color-bg-base, #fff));
+	color: var(--cms-color-warning, #d97706);
+	font-size: 13px;
+	font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+	.rt_psfii__layout {
+		grid-template-columns: 1fr;
+	}
+}

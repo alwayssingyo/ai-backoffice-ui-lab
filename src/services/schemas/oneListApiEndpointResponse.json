@@ -1,0 +1,26 @@
+{
+	"type": "object",
+	"properties": {
+		"list": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"apiEndpointId": {"type": "integer", "format": "int64", "description": "API 엔드포인트 아이디"},
+					"tagName": {"type": "string", "description": "Tag name"},
+					"tagDescription": {"type": "string", "description": "Tag description"},
+					"httpMethods": {
+						"type": "array",
+						"description": "사용 가능한 HTTP 메서드 목록",
+						"items": {"type": "string", "enum": ["GET", "POST", "PUT", "DELETE"]},
+						"uniqueItems": true
+					}
+				},
+				"required": ["apiEndpointId", "httpMethods", "tagName"],
+				"x-readme-ref-name": "ApiEndpointResponse"
+			}
+		}
+	},
+	"required": ["list"],
+	"x-readme-ref-name": "OneListApiEndpointResponse"
+}

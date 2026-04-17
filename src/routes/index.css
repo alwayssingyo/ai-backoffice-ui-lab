@@ -1,0 +1,73 @@
+.rt_index__root {
+	width: 100%;
+	height: 100%;
+}
+
+/* login */
+.rt_index__login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.rt_index__loginArea {
+	max-width: 350px;
+	margin-bottom: 40px;
+	position: relative;
+	text-align: center;
+}
+
+.rt_index__loginLogo {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+}
+
+.rt_index__loginTitle {
+	font-weight: 700;
+	font-size: 24px;
+	color: #000;
+}
+
+.rt_index__loginDesc {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #272727;
+}
+
+.rt_index__loginForm {
+	margin-top: 24px;
+	text-align: left;
+}
+
+.rt_index__loginDivider {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 12px;
+	color: #8c8c8c;
+}
+
+.rt_index__loginDivider::before,
+.rt_index__loginDivider::after {
+	content: "";
+	position: relative;
+	flex: 1;
+	border-top: 1px solid #e5e5e5;
+}
+
+.rt_index__loginDivider > span {
+	padding: 0 10px;
+}
+
+.rt_index__loginBtn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 16px;
+}

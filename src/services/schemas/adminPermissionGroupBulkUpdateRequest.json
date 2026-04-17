@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"permissionGroupId": {"type": "integer", "format": "int64"},
+		"adminIds": {"type": "array", "items": {"type": "integer", "format": "int64"}, "minItems": 1, "uniqueItems": true}
+	},
+	"required": ["adminIds", "permissionGroupId"],
+	"x-readme-ref-name": "AdminPermissionGroupBulkUpdateRequest"
+}

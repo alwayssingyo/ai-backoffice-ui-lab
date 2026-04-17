@@ -1,0 +1,32 @@
+{
+	"type": "object",
+	"properties": {
+		"page": {"type": "integer", "format": "int32"},
+		"totalCount": {"type": "integer", "format": "int32"},
+		"list": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"type": "integer", "format": "int64", "description": "감사 로그 아이디"},
+					"adminId": {"type": "string", "description": "관리자 아이디"},
+					"adminName": {"type": "string", "description": "관리자 이름"},
+					"description": {"type": "string", "description": "설명"},
+					"url": {"type": "string", "description": "요청 URL"},
+					"method": {"type": "string", "description": "요청 메서드"},
+					"status": {"type": "string", "description": "응답 상태"},
+					"requestBody": {"type": "string", "description": "요청 본문"},
+					"executionTimeMs": {"type": "integer", "format": "int32", "description": "실행 시간(ms)"},
+					"start": {"type": "string", "description": "요청 시작 시각"},
+					"end": {"type": "string", "description": "요청 종료 시각"},
+					"timestamp": {"type": "string", "description": "로그 타임스탬프"},
+					"createdAt": {"type": "string", "format": "date-time", "description": "생성 일시"}
+				},
+				"required": ["createdAt", "id"],
+				"x-readme-ref-name": "AuditLogPageResponse"
+			}
+		}
+	},
+	"required": ["list", "page", "totalCount"],
+	"x-readme-ref-name": "OnePageAuditLogPageResponse"
+}

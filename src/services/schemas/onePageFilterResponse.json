@@ -1,0 +1,42 @@
+{
+	"type": "object",
+	"properties": {
+		"page": {"type": "integer", "format": "int32"},
+		"totalCount": {"type": "integer", "format": "int32"},
+		"list": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"type": "integer", "format": "int64", "description": "필터 아이디"},
+					"table": {"type": "string", "description": "테이블명"},
+					"field": {"type": "string", "description": "컬럼명"},
+					"label": {"type": "string", "description": "컬럼 레이블"},
+					"dataType": {"type": "string", "description": "컬럼 타입"},
+					"operator": {"type": "string", "description": "연산자"},
+					"component": {"type": "string", "description": "입력 컴포넌트"},
+					"items": {
+						"type": "array",
+						"description": "컴포넌트 요소",
+						"items": {
+							"type": "object",
+							"properties": {
+								"label": {"type": "string", "description": "노출 라벨"},
+								"value": {"type": "string", "description": "실제 값"}
+							},
+							"required": ["label", "value"],
+							"x-readme-ref-name": "FilterItemOptionResponse"
+						}
+					},
+					"creatorId": {"type": "integer", "format": "int64", "description": "생성자 아이디"},
+					"createdAt": {"type": "string", "format": "date-time", "description": "생성 일시"},
+					"updatedAt": {"type": "string", "format": "date-time", "description": "수정 일시"}
+				},
+				"required": ["component", "createdAt", "creatorId", "dataType", "field", "id", "label", "operator", "table"],
+				"x-readme-ref-name": "FilterResponse"
+			}
+		}
+	},
+	"required": ["list", "page", "totalCount"],
+	"x-readme-ref-name": "OnePageFilterResponse"
+}

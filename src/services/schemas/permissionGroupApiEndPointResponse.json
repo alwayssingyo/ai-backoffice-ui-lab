@@ -1,0 +1,50 @@
+{
+	"type": "object",
+	"properties": {
+		"permissionGroup": {
+			"type": "object",
+			"properties": {
+				"id": {"type": "integer", "format": "int64", "description": "권한 그룹 아이디"},
+				"name": {"type": "string", "description": "권한 그룹명"},
+				"description": {"type": "string", "description": "설명"}
+			},
+			"required": ["id", "name"],
+			"x-readme-ref-name": "PermissionGroupResponse",
+			"description": "권한 그룹 상세 정보"
+		},
+		"permissions": {
+			"type": "array",
+			"description": "할당 API 엔드포인트 권한 목록",
+			"items": {
+				"type": "object",
+				"properties": {
+					"tagName": {"type": "string", "description": "Tag name"},
+					"httpMethods": {
+						"type": "array",
+						"description": "사용 가능한 HTTP 메서드 목록",
+						"items": {"type": "string", "enum": ["GET", "POST", "PUT", "DELETE"]},
+						"uniqueItems": true
+					}
+				},
+				"required": ["httpMethods", "tagName"],
+				"x-readme-ref-name": "ApiEndpointSummaryResponse"
+			}
+		},
+		"permissionGroupAdmin": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"type": "integer", "format": "int64", "description": "어드민 아이디"},
+					"loginId": {"type": "string", "description": "로그인 아이디"},
+					"name": {"type": "string", "description": "이름"},
+					"removed": {"type": "boolean", "description": "삭제 여부"}
+				},
+				"required": ["id", "loginId", "name", "removed"],
+				"x-readme-ref-name": "PermissionGroupAdminResponse"
+			}
+		}
+	},
+	"required": ["permissionGroup"],
+	"x-readme-ref-name": "PermissionGroupApiEndPointResponse"
+}

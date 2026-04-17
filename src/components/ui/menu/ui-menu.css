@@ -1,0 +1,10 @@
+.ui_menu .ant-menu-item-group-title {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+.ui_menu .ant-menu-item-group .ant-menu-item-group-list .ant-menu-item {
+	padding-inline: var(--cms-padding, 16px);
+}

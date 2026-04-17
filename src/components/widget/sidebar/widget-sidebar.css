@@ -1,0 +1,450 @@
+.wg_sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 230px;
+	height: 100%;
+	border-right: 1px solid var(--cms-color-border, #f0f0f0);
+	flex-shrink: 0;
+	background-color: var(--cms-color-bg-container);
+	z-index: 1000;
+	transition: width 0.3s;
+}
+
+.wg_sidebar__title {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	border-bottom: 1px solid var(--cms-color-border, #f0f0f0);
+	padding: 0 16px;
+	gap: 8px;
+}
+
+.wg_sidebar__logo {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	border-radius: var(--cms-border-radius);
+	border: 1px solid var(--cms-color-border);
+	overflow: hidden;
+	background-color: var(--cms-color-white);
+}
+
+.wg_sidebar__title img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.wg_sidebar__title .ant-typography {
+	font-size: 16px;
+	text-align: left;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	word-break: break-word;
+	max-width: 140px;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	transition-delay: 0.2s;
+}
+
+.wg_sidebar__menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+	width: 100%;
+	padding: 10px 0 0 0;
+}
+
+.wg_sidebar__nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.wg_sidebar__nav > .ant-menu {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	/* biome-ignore lint/complexity/noImportantStyles: antd 기본 보더를 제거하기 위해 필요합니다. */
+	border: none !important;
+	padding: 0 10px;
+}
+
+.wg_sidebar__menu .ant-menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 34px;
+	margin: 0;
+	padding: 0 12px;
+	/* biome-ignore lint/complexity/noImportantStyles: 좌측 패딩을 고정하기 위해 필요합니다. */
+	padding-left: 12px !important;
+}
+
+.wg_sidebar__menu .ant-menu-title-content {
+	font-weight: 500;
+	max-width: 160px;
+	opacity: 1;
+}
+
+.wg_sidebar__menu .ant-menu-item-selected {
+	background-color: var(--cms-color-primary);
+	color: var(--cms-color-white);
+}
+
+.wg_sidebar__menu .ant-menu-item-selected .ant-menu-title-content {
+	font-weight: 700;
+}
+
+.wg_sidebar__menu .ant-menu-item .ant-menu-item-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+}
+
+.wg_sidebar__menu .ant-menu-submenu {
+	width: calc(100% - 8px);
+	padding: 0;
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-item-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-submenu-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 34px;
+	margin: 0;
+	/* biome-ignore lint/complexity/noImportantStyles: 서브메뉴 타이틀 패딩을 고정하기 위해 필요합니다. */
+	padding: 0 12px !important;
+	color: var(--cms-color-text-base);
+}
+
+.wg_sidebar__menu .ant-menu-submenu.ant-menu-submenu-selected .ant-menu-submenu-title {
+	background-color: var(--cms-color-primary);
+	color: var(--cms-color-white);
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-submenu-title[aria-expanded="true"] {
+	background-color: var(--cms-menu-sub-menu-item-bg);
+	color: var(--cms-color-text-base);
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-sub.ant-menu {
+	width: 100%;
+	margin-top: 4px;
+	border-radius: var(--cms-border-radius);
+	padding: 8px 4px;
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-sub.ant-menu .ant-menu-item {
+	width: 100%;
+	/* biome-ignore lint/complexity/noImportantStyles: 서브메뉴 들여쓰기를 강제하기 위해 필요합니다. */
+	padding-left: 24px !important;
+}
+
+.wg_sidebar__menu .ant-menu-submenu .ant-menu-sub.ant-menu .ant-menu-item + .ant-menu-item {
+	margin-top: 4px;
+}
+
+.wg_sidebar__controls {
+	display: flex;
+	align-items: stretch;
+	gap: 12px;
+	padding: 14px 10px 14px 10px;
+	.ant-btn {
+		font-size: 0;
+	}
+}
+
+.wg_sidebar__collapse {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-left: auto;
+}
+
+.wg_sidebar__menuComp.ant-menu-submenu-popup {
+	min-width: 200px;
+}
+
+.wg_sidebar__menuComp .ant-menu .ant-menu-item {
+	height: 34px;
+	line-height: 34px;
+	border-radius: var(--cms-border-radius);
+}
+
+.wg_sidebar__menuComp .ant-menu .ant-menu-title-content {
+	line-height: 34px;
+}
+
+.wg_sidebar__menuComp .ant-menu .ant-menu-item-selected {
+	background-color: var(--cms-color-primary);
+	color: var(--cms-color-white);
+}
+
+.wg_sidebar__menuComp .ant-menu .ant-menu-item-selected .ant-menu-title-content {
+	font-weight: 700;
+}
+
+/* profile */
+.wg_sidebar__profile {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 20px;
+	height: 65px;
+	border-top: 1px solid var(--cms-color-border, #f0f0f0);
+}
+
+.wg_sidebar__profile > span {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	min-width: 0;
+}
+
+.wg_sidebar__profile .ant-avatar {
+	cursor: pointer;
+	background-color: var(--cms-color-primary, #4945ff);
+}
+
+.wg_sidebar__profile .ant-avatar-string {
+	font-weight: 600;
+}
+
+.wg_sidebar--collapsed {
+	width: 55px;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__title {
+	display: block;
+	padding: 0;
+	text-align: center;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__logoButton {
+	justify-content: center;
+	gap: 0;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__title .ant-typography {
+	max-width: 0;
+	opacity: 0;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__nav > .ant-menu {
+	align-items: center;
+	padding: 0;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__menu .ant-menu-item {
+	width: 34px;
+	justify-content: center;
+	/* biome-ignore lint/complexity/noImportantStyles: 접힘 상태에서 패딩을 제거하기 위해 필요합니다. */
+	padding: 0 !important;
+	/* biome-ignore lint/complexity/noImportantStyles: 접힘 상태 전환 시 애니메이션을 제거하기 위해 필요합니다. */
+	transition: none !important;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__menu .ant-menu-title-content {
+	max-width: 0;
+	opacity: 0;
+	/* biome-ignore lint/complexity/noImportantStyles: 접힘 상태에서 텍스트를 완전히 숨기기 위해 필요합니다. */
+	display: none !important;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__controls {
+	padding: 14px 0;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__collapse {
+	margin: 0 auto;
+}
+
+.wg_sidebar--collapsed .ant-menu-submenu {
+	width: 34px;
+	justify-content: center;
+}
+
+.wg_sidebar--collapsed .ant-menu-submenu .ant-menu-submenu-title {
+	/* biome-ignore lint/complexity/noImportantStyles: 접힘 상태에서 패딩을 제거하기 위해 필요합니다. */
+	padding: 0 !important;
+}
+
+.wg_sidebar--collapsed .ant-menu-submenu.ant-menu-submenu-selected .ant-menu-submenu-title {
+	background-color: var(--cms-color-primary);
+	color: var(--cms-color-white);
+}
+
+.wg_sidebar__profileUserName {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
+	cursor: pointer;
+}
+
+.wg_sidebar__profileUserInfo {
+	min-width: 0;
+	flex: 1;
+}
+
+.wg_sidebar__profileUserEmail {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.15;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	color: var(--cms-color-text-secondary);
+}
+
+.wg_sidebar--collapsed .wg_sidebar__profile {
+	padding: 0;
+	justify-content: center;
+}
+
+.wg_sidebar--collapsed .wg_sidebar__profileUserInfo {
+	display: none;
+}
+
+.wg_sidebar__popover .ant-popover-container {
+	padding: 0;
+	border: 1px solid var(--cms-color-border, #f0f0f0);
+}
+
+.wg_sidebar__profileInfo {
+	padding: 12px;
+}
+
+.wg_sidebar__profileCont {
+	width: 200px;
+}
+
+.wg_sidebar__profileTitle {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--cms-color-text);
+}
+
+.wg_sidebar__profileEmail {
+	margin-bottom: 12px;
+	font-size: 12px;
+	color: var(--cms-color-text-secondary, rgba(0, 0, 0, 0.65));
+}
+
+.wg_sidebar__profileRole {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.wg_sidebar__profileRole .ant-tag {
+	font-weight: 600;
+	color: var(--cms-color-text-secondary, rgba(0, 0, 0, 0.65));
+	text-transform: uppercase;
+}
+
+.wg_sidebar__profileMenu {
+	margin: 4px;
+	padding: 4px 0;
+	border-top: 1px solid var(--cms-color-border, #f0f0f0);
+}
+
+.wg_sidebar__profileMenuItem {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	text-align: left;
+	padding: 8px 16px;
+	font-size: 14px;
+	border-radius: var(--cms-border-radius);
+	color: var(--cms-color-text);
+
+	&:hover {
+		background-color: var(--cms-control-item-bg-hover);
+	}
+}
+
+.wg_sidebar__profileMenuIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+}
+
+.wg_sidebar__profileMenuText {
+	flex: 1;
+	min-width: 0;
+}
+
+.wg_sidebar__profileMenuChevron {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wg_sidebar__popoverSub .ant-popover-container {
+	padding: 0;
+	border: 1px solid var(--cms-color-border, #f0f0f0);
+}
+
+.wg_sidebar__popoverSub .ant-popover-arrow {
+	display: none;
+}
+
+.wg_sidebar__popoverSub .ant-popover-content {
+	padding: 8px 6px;
+}
+
+.wg_sidebar__popoverList {
+	display: flex;
+	flex-direction: column;
+	min-width: 160px;
+}
+
+.wg_sidebar__popoverItem {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	padding: 8px;
+	border-radius: var(--cms-border-radius);
+	font-size: 14px;
+	color: var(--cms-color-text);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.wg_sidebar__popoverItem:hover {
+	background-color: var(--cms-control-item-bg-hover);
+}
+
+.wg_sidebar__profileMenuItem--danger {
+	color: var(--cms-color-error, #ff4d4f);
+
+	&:hover {
+		background-color: var(--cms-color-error-bg-hover, #fff1f0);
+	}
+}

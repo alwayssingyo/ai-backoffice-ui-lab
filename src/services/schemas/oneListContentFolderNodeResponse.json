@@ -1,0 +1,8 @@
+{
+	"type": "object",
+	"properties": {
+		"list": {"type": "array", "items": {"$ref": "#/components/schemas/ContentFolderNodeResponse", "description": "하위 노드"}}
+	},
+	"required": ["list"],
+	"x-readme-ref-name": "OneListContentFolderNodeResponse"
+}

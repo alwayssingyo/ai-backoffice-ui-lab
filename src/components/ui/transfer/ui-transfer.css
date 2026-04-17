@@ -1,0 +1,29 @@
+.ui_transfer .ant-transfer-section {
+	width: calc(50% - 20px);
+	min-height: 400px;
+}
+
+.ui_transfer .ant-transfer-actions .ant-btn {
+	width: 32px;
+	height: 32px;
+	box-shadow: none;
+}
+
+.ui_transfer .ant-transfer-list-header .ant-transfer-list-header-selected {
+	order: 4;
+	margin-left: auto;
+	color: var(--cms-color-text-tertiary);
+}
+
+.ui_transfer .ant-transfer-list-header .ant-transfer-list-header-title {
+	margin: 0;
+	font-weight: 600;
+}
+
+.ui_transfer .ant-transfer-list-header .ant-dropdown-trigger {
+	display: none;
+}
+
+.ui_transfer .ant-transfer-list-header:has(.ant-transfer-list-checkbox) .ant-transfer-list-header-title {
+	padding-left: 4px;
+}

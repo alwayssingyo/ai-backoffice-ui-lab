@@ -1,0 +1,31 @@
+.loc_memu__root {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.loc_memu__header {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.loc_memu__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.loc_memu__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 32px;
+}
+
+.loc_memu__actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-left: auto;
+}

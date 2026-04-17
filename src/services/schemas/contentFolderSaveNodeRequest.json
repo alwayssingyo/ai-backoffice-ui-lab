@@ -1,0 +1,16 @@
+{
+	"type": "object",
+	"properties": {
+		"nodeType": {"type": "string", "description": "노드 타입(FOLDER/TABLE)", "enum": ["FOLDER", "TABLE"]},
+		"name": {"type": "string", "description": "표시명(FOLDER/TABLE에서 필수)", "minLength": 1},
+		"tableName": {"type": "string", "description": "테이블명(TABLE에서 필수)"},
+		"displayed": {"type": "boolean", "description": "노출 여부"},
+		"children": {
+			"type": "array",
+			"description": "하위 노드(FOLDER에서만 사용, TABLE만 허용)",
+			"items": {"$ref": "#/components/schemas/ContentFolderSaveNodeRequest"}
+		}
+	},
+	"required": ["displayed", "name", "nodeType"],
+	"x-readme-ref-name": "ContentFolderSaveNodeRequest"
+}

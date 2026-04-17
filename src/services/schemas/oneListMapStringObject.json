@@ -1,0 +1,6 @@
+{
+	"type": "object",
+	"properties": {"list": {"type": "array", "items": {"type": "object", "additionalProperties": {}}}},
+	"required": ["list"],
+	"x-readme-ref-name": "OneListMapStringObject"
+}

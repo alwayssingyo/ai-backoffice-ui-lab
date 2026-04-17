@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"id": {"type": "integer", "format": "int64", "description": "파일 아이디"},
+		"url": {"type": "string", "description": "파일 URL"},
+		"path": {"type": "string", "description": "스토리지 경로"},
+		"mimeType": {"type": "string", "description": "MIME 타입"},
+		"name": {"type": "string", "description": "파일명"},
+		"size": {"type": "integer", "format": "int64", "description": "파일 크기(byte)"},
+		"ext": {"type": "string", "description": "확장자"},
+		"provider": {"type": "string", "description": "스토리지 제공자", "enum": ["AWS", "GCP", "NCP", "LOCAL"]}
+	},
+	"required": ["ext", "id", "mimeType", "name", "path", "provider", "size", "url"],
+	"x-readme-ref-name": "MediaFileResponse"
+}

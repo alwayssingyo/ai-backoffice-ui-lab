@@ -1,0 +1,66 @@
+.loc_mpmf__transfer {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.loc_mpmf__transfer .ant-transfer-list-content .ant-transfer-list-content-item-remove {
+	display: none;
+}
+
+.loc_mpmf__transfer .ant-transfer-actions + .ant-transfer-section .ant-transfer-list-body-search-wrapper {
+	display: none;
+}
+
+.loc_mpmf__transfer .ant-transfer-actions + .ant-transfer-section .ant-transfer-list-content {
+	padding-top: 8px;
+}
+
+.loc_mpmf__memberItem {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-width: 0;
+	padding: 6px 2px;
+}
+
+.loc_mpmf__memberItem .ant-avatar {
+	flex-shrink: 0;
+}
+
+.loc_mpmf__memberItem .ant-avatar-string {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.loc_mpmf__memberInfo {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	min-width: 0;
+	flex: 1;
+}
+
+.loc_mpmf__memberName {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--cms-color-text);
+	line-height: 1.3;
+}
+
+.loc_mpmf__memberLoginId {
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+	line-height: 1.3;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 8px;
+}
+
+.loc_mpmf__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}

@@ -1,0 +1,135 @@
+/* 멤버 목록 화면 */
+.rt_dmi__searchPanel {
+	margin-bottom: 16px;
+}
+
+.rt_dmi__tableHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.rt_dmi__tableHeaderInfo {
+	display: flex;
+	gap: 4px;
+}
+
+.rt_dmi__tableHeaderCount {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+.rt_dmi__tableHeaderActions {
+	display: flex;
+	gap: 4px;
+}
+
+/* 멤버 수정 화면 */
+.rt_dmf__cont {
+	display: flex;
+}
+
+.rt_dmf__form {
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+	padding: 24px;
+	border-radius: var(--cms-border-radius, 4px);
+	background-color: var(--cms-color-bg-base, #fff);
+}
+
+.rt_dmf__form + .rt_dmf__form {
+	margin-top: 24px;
+}
+
+.rt_dmf__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px 24px;
+}
+
+.rt_dmf__form .ui_typoTtl + .rt_dmf__grid {
+	margin-top: 20px;
+}
+
+.rt_dmf__form .ant-divider {
+	margin: 10px 0;
+}
+
+.rt_dmf__form .ant-divider + .ant-typography {
+	padding-top: 12px;
+}
+
+.rt_dmf__metaItem {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.rt_dmf__infoGrid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: var(--cms-border-radius, 4px);
+	background-color: var(--cms-color-fill-tertiary, rgba(0, 0, 0, 0.04));
+}
+
+.rt_dmf__infoTitle {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+	margin-bottom: 4px;
+}
+
+.rt_dmf__infoValue {
+	font-size: 14px;
+}
+
+.rt_dmf__permissionList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.rt_dmf__permissionHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.rt_dmf__permissionCard {
+	display: flex;
+	width: calc(33.333% - 8px);
+	gap: 8px;
+	padding: 16px 20px;
+	border-radius: var(--cms-border-radius, 4px);
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+}
+
+.rt_dmf__permissionInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.rt_dmf__permissionMethods {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.rt_dmf__permissionMethod {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.rt_dmf__empty {
+	margin-top: 8px;
+}

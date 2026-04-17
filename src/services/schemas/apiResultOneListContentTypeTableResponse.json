@@ -1,0 +1,119 @@
+{
+	"type": "object",
+	"properties": {
+		"result": {
+			"type": "string",
+			"enum": [
+				"SUCCESS",
+				"SYSTEM_ERROR",
+				"BAD_REQUEST",
+				"UNAUTHORIZED",
+				"FORBIDDEN",
+				"INVALID_JWT_TOKEN",
+				"EXPIRED_JWT_TOKEN",
+				"UNSUPPORTED_JWT_TOKEN",
+				"EMPTY_JWT_TOKEN",
+				"INVALID_OTP_TOKEN",
+				"TENANT_NOT_FOUND",
+				"PROJECT_NOT_FOUND",
+				"TABLE_NOT_FOUND",
+				"COLUMN_NOT_FOUND",
+				"CONTENT_NOT_FOUND",
+				"ADMIN_NOT_FOUND",
+				"SECRET_KEY_NOT_FOUND",
+				"PERMISSION_GROUP_NOT_FOUND",
+				"REQUIRED_VALUE",
+				"MIN_VALUE_VIOLATION",
+				"MAX_VALUE_VIOLATION",
+				"MIN_LENGTH_VIOLATION",
+				"MAX_LENGTH_VIOLATION",
+				"INVALID_PATTERN",
+				"UNSUPPORTED_LOGIN_PROVIDER",
+				"SAFE_COLUMN_NAME_REGEX",
+				"ENUM_VALUE_REQUIRED",
+				"INVALID_ENUM_DEFAULT_VALUE",
+				"INVALID_BOOLEAN_DEFAULT_VALUE",
+				"UNSUPPORTED_UNIQUE_COLUMN_TYPE",
+				"COLUMN_ALREADY_EXISTS",
+				"CANNOT_WRITE_PRIVATE_COLUMN",
+				"INVALID_DB_CONNECTION_INFO",
+				"OAUTH_EMAIL_NOT_FOUND",
+				"OAUTH_NAME_NOT_FOUND",
+				"OAUTH_LOGIN_FAILED",
+				"INVALID_OTP_LOCK_COUNT",
+				"ADMIN_REQUIRED_VALUE",
+				"SOCIAL_ADMIN_INVALID_VALUE",
+				"ADMIN_LOGIN_ID_DUPLICATED",
+				"PROJECT_PERMISSION_DENIED",
+				"CANNOT_MODIFY_SUPER_ADMIN_PERMISSION",
+				"INVALID_CREDENTIALS",
+				"INVALID_CREDENTIALS_LOCK_COUNT",
+				"CONTENT_FOLDER_TABLE_KEY_REQUIRED",
+				"INVALID_CONTENT_FOLDER_NODE_STRUCTURE",
+				"DUPLICATED_CONTENT_FOLDER_TABLE_KEY",
+				"INVALID_AWS_S3_CONFIG_VALUE"
+			]
+		},
+		"data": {
+			"type": "object",
+			"properties": {
+				"list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"tableName": {"type": "string", "description": "테이블 명"},
+							"displayName": {"type": "string", "description": "테이블 표시 명"},
+							"columns": {
+								"type": "array",
+								"description": "컬럼 목록",
+								"items": {
+									"type": "object",
+									"properties": {
+										"name": {"type": "string", "description": "컬럼 명"},
+										"ordinalPosition": {"type": "integer", "format": "int32", "description": "컬럼 순서"},
+										"columnType": {"type": "string", "description": "컬럼 데이터 유형"},
+										"fieldType": {
+											"type": "string",
+											"description": "컬럼 필드 타입",
+											"enum": ["TEXT", "BOOLEAN", "JSON", "NUMBER", "DATE", "ENUMERATION", "MEDIA", "RELATION"]
+										},
+										"required": {"type": "boolean", "description": "필수값 여부"},
+										"defaultValue": {"type": "string", "description": "기본값"},
+										"unique": {"type": "boolean", "description": "유니크 여부"},
+										"privateField": {"type": "boolean", "description": "비공개 컬럼 여부"},
+										"regexpPattern": {"type": "string", "description": "정규식 패턴"},
+										"minLength": {"type": "integer", "format": "int32", "description": "최소 길이"},
+										"maxLength": {"type": "integer", "format": "int32", "description": "최대 길이"},
+										"minValue": {"type": "integer", "format": "int32", "description": "최소값"},
+										"maxValue": {"type": "integer", "format": "int32", "description": "최대값"},
+										"textType": {"type": "string", "description": "텍스트 타입", "enum": ["SHORT_TEXT", "LONG_TEXT"]},
+										"numberType": {"type": "string", "description": "숫자 타입", "enum": ["INTEGER", "BIG_INTEGER", "DECIMAL", "FLOAT"]},
+										"precision": {"type": "integer", "format": "int32", "description": "정밀도"},
+										"scale": {"type": "integer", "format": "int32", "description": "소수점 자릿수"},
+										"dateType": {"type": "string", "description": "날짜 타입", "enum": ["DATE", "DATE_TIME", "TIME"]},
+										"enumValues": {"type": "array", "description": "enum 값 목록", "items": {"type": "string"}},
+										"relationType": {
+											"type": "string",
+											"description": "관계 타입",
+											"enum": ["ONE_TO_ONE", "MANY_TO_ONE", "ONE_TO_MANY", "MANY_TO_MANY"]
+										},
+										"relationTargetTable": {"type": "string", "description": "관계 대상 테이블"}
+									},
+									"required": ["columnType", "fieldType", "name", "ordinalPosition"],
+									"x-readme-ref-name": "ContentTypeColumnResponse"
+								}
+							}
+						},
+						"required": ["columns", "tableName"],
+						"x-readme-ref-name": "ContentTypeTableResponse"
+					}
+				}
+			},
+			"required": ["list"],
+			"x-readme-ref-name": "OneListContentTypeTableResponse"
+		}
+	},
+	"required": ["data", "result"],
+	"x-readme-ref-name": "ApiResultOneListContentTypeTableResponse"
+}

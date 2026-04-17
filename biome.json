@@ -1,0 +1,64 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"vcs": {"enabled": false, "clientKind": "git", "useIgnoreFile": true},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": [
+			"**/src/**/*",
+			"**/index.html",
+			"**/vite.config.js",
+			"**/kubb.config.ts",
+			"!**/.kubb/**/*",
+			"!**/src/routeTree.gen.ts",
+			"!**/src/styles.css"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUndeclaredVariables": "off",
+				"useExhaustiveDependencies": "off",
+				"noUnusedImports": "warn",
+				"useHookAtTopLevel": "error"
+			},
+			"style": {
+				"noNonNullAssertion": "off",
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"@/utils/auth.ts": "Use `@/entry/util.ts` and `util.auth.*` instead.",
+							"@/utils/query.ts": "Use `@/entry/util.ts` and `util.query.*` instead.",
+							"@/utils/fn.ts": "Use `@/entry/util.ts` and `util.fn.*` instead.",
+							"@/config/date.ts": "Use `@/entry/config.ts` and `config.date.*` instead.",
+							"@/config/navigation.ts": "Use `@/entry/config.ts` and `config.navigation.*` instead.",
+							"@/config/number.ts": "Use `@/entry/config.ts` and `config.number.*` instead.",
+							"@/config/text.ts": "Use `@/entry/config.ts` and `config.text.*` instead.",
+							"@/assets/images.ts": "Use `@/entry/asset.ts` and `asset.images.*` instead."
+						}
+					}
+				},
+				"useConsistentArrayType": {"level": "warn", "options": {"syntax": "shorthand"}},
+				"useSelfClosingElements": "error"
+			},
+			"suspicious": {"noExtraNonNullAssertion": "warn", "noShadowRestrictedNames": "off"},
+			"complexity": {"noUselessFragments": "off", "noUselessConstructor": "warn", "noForEach": "off", "useLiteralKeys": "off"}
+		}
+	},
+	"assist": {"actions": {"source": {"organizeImports": "off"}}},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 140,
+		"attributePosition": "auto",
+		"bracketSpacing": false,
+		"bracketSameLine": false,
+		"expand": "never"
+	},
+	"javascript": {"formatter": {"quoteStyle": "double", "arrowParentheses": "always"}},
+	"css": {"formatter": {"enabled": true, "indentStyle": "tab", "indentWidth": 2, "quoteStyle": "double"}, "linter": {"enabled": true}},
+	"json": {"parser": {"allowComments": true, "allowTrailingCommas": true}}
+}

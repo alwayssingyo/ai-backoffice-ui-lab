@@ -1,0 +1,7 @@
+.ui_empty {
+	padding: 24px 0;
+}
+
+.ui_empty .ant-empty-description {
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.25));
+}

@@ -1,0 +1,92 @@
+.loc_mpermi {
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+	padding-bottom: 60px;
+}
+
+.loc_mpermi__form {
+	margin-top: 12px;
+}
+
+.loc_mpermi__actions {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	padding: 16px;
+	background-color: var(--cms-color-bg-base, #fff);
+	border-radius: var(--cms-border-radius, 4px);
+}
+
+.loc_mpermi__matrix {
+	margin-top: 30px;
+	background-color: var(--cms-color-bg-base, #fff);
+}
+
+.loc_mpermi__matrixHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 10px;
+}
+
+.loc_mpermi__matrixBody {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--cms-border-radius, 4px);
+	border: 1px solid var(--cms-color-border, #d9d9d9);
+}
+
+.loc_mpermi__matrixRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 10px 12px;
+}
+
+.loc_mpermi__matrixRow + .loc_mpermi__matrixRow {
+	border-top: 1px solid var(--cms-color-border, #d9d9d9);
+}
+
+.loc_mpermi__matrixInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.loc_mpermi__matrixInfo .ant-typography:last-child {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.loc_mpermi__matrixActions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	justify-content: flex-end;
+}
+
+.loc_mpermi__matrixAction {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 6px;
+	border-radius: 4px;
+	background-color: var(--cms-color-fill-tertiary, rgba(0, 0, 0, 0.04));
+}
+
+@media (max-width: 640px) {
+	.loc_mpermi__matrixRow {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.loc_mpermi__matrixActions {
+		justify-content: flex-start;
+	}
+}

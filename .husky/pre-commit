@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "🔍 Running lint/format check on staged files..."
+cd web && npx lint-staged
+
+echo "✅ Pre-commit checks passed!"

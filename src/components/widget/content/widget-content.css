@@ -1,0 +1,61 @@
+/* Header */
+.wg_contHeader {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	border-bottom: 1px solid var(--cms-color-border, #f0f0f0);
+	background-color: var(--cms-color-bg-base);
+	z-index: 99;
+}
+
+.wg_contHeader__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.wg_contHeader__top {
+	flex: none;
+}
+
+.wg_contHeader__top .ant-typography {
+	font-size: 20px;
+}
+
+.wg_contHeader__actions {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.wg_contHeader__actions .ant-divider {
+	height: 1.5em;
+	margin: 0 4px;
+}
+
+.wg_contHeader__bottom {
+	font-size: 14px;
+	color: var(--cms-color-text-tertiary, rgba(0, 0, 0, 0.45));
+}
+
+/* Body */
+.wg_contBody {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--cms-color-bg-base);
+	overflow-y: auto;
+	flex: 1;
+}
+
+.wg_contBody__inner {
+	width: 100%;
+	padding: 20px;
+}

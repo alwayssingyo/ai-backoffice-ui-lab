@@ -1,0 +1,16 @@
+.loc_lotp__root {
+	display: grid;
+	gap: 12px;
+}
+
+.loc_lotp__otp .ant-input {
+	font-size: var(--cms-font-size-heading1, 38px);
+	font-weight: 600;
+	text-align: center;
+}
+
+.loc_lotp__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}
